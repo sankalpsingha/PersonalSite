@@ -1,7 +1,8 @@
 {
-    "workbench.colorCustomizations": {
-        "activityBar.background": "#511345",
-        "titleBar.activeBackground": "#721B61",
-        "titleBar.activeForeground": "#FDF8FC"
+    "prettier.documentSelectors": [
+        "**/*.astro"
+    ],
+    "[astro]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
     }
 }
