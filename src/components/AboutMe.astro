@@ -1,0 +1,35 @@
+---
+import type { Code } from 'astro:components'
+import SocialLink from '../components/SocialLink'
+import { GitHubIcon, InstagramIcon, LinkedInIcon, TwitterIcon } from './SocialIcons'
+import { Image } from 'astro:assets'
+import MyAvatar from '../images/me.jpg'
+---
+
+<div class="mt-16 max-w-2xl">
+	<div class="image my-10">
+		<Image
+			src={MyAvatar}
+			alt="Sankalp"
+			class="mx-auto block h-40 w-40 rounded-full md:inline-block md:h-36 md:w-36"
+		/>
+	</div>
+	<h1 class="text-center text-3xl font-bold tracking-tight text-zinc-800 md:text-left md:text-4xl">
+		Software engineer, hacker and musician.
+	</h1>
+	<p class="mt-6 text-base text-zinc-600">
+		I’m Sankalp, a software designer and entrepreneur based in Jakarta, Indonesia. I’m the Head Of
+		Engineer for Autobahn Security, where we develop technologies that empower regular companies to
+		explore security on their own terms and make them Cyberfit.
+	</p>
+	<div class="mt-6 flex gap-6">
+		<SocialLink href="https://twitter.com" aria-label="Follow on Twitter" icon={TwitterIcon} />
+		<SocialLink
+			href="https://instagram.com"
+			aria-label="Follow on Instagram"
+			icon={InstagramIcon}
+		/>
+		<SocialLink href="https://github.com" aria-label="Follow on GitHub" icon={GitHubIcon} />
+		<SocialLink href="https://linkedin.com" aria-label="Follow on LinkedIn" icon={LinkedInIcon} />
+	</div>
+</div>

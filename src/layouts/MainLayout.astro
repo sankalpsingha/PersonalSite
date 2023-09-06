@@ -15,6 +15,8 @@ const { title = "Sankalp's Web Home" } = Astro.props as Props
 		<meta name="generator" content={Astro.generator} />
 	</head>
 	<body>
-		<slot />
+		<div class="wrapper">
+			<slot />
+		</div>
 	</body>
 </html>
