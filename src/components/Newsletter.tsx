@@ -38,7 +38,7 @@ export default function Newsletter() {
 				/>
 				<button
 					type="submit"
-					className="primary ml-4 rounded-md bg-slate-700 px-3 py-2 text-sm text-white transition active:transition-none"
+					className="primary ml-4 rounded-md bg-slate-800 px-3 py-2 text-sm text-white transition active:transition-none"
 				>
 					Join
 				</button>

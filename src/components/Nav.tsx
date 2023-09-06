@@ -1,20 +1,21 @@
 import { useState } from 'react'
 import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import Logo from '../images/logo.png?url'
 
 const navigation = [
 	{ name: 'Home', href: '#' },
 	{ name: 'About', href: '#' },
 	{ name: 'Blog', href: '#' },
 	{ name: 'Articles', href: '#' },
-	{ name: 'contact', href: '#' }
+	{ name: 'Contact', href: '#' }
 ]
 
 export default function Nav() {
 	const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
 	return (
-		<header className="bg-white">
+		<header className="bg-white dark:bg-black">
 			<nav
 				className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
 				aria-label="Global"
@@ -22,11 +23,7 @@ export default function Nav() {
 				<div className="flex lg:flex-1">
 					<a href="#" className="-m-1.5 p-1.5">
 						<span className="sr-only">Your Company</span>
-						<img
-							className="h-8 w-auto"
-							src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-							alt=""
-						/>
+						<img className="h-8 w-auto" src={Logo} alt="" />
 					</a>
 				</div>
 				<div className="flex lg:hidden">

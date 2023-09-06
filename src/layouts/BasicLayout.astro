@@ -3,6 +3,9 @@ export interface Props {
 	title?: string
 }
 const { title = "Sankalp's Web Home" } = Astro.props as Props
+import Container from './Container.astro'
+import Nav from '../components/Nav'
+import Footer from '../components/Footer'
 ---
 
 <!doctype html>
@@ -20,7 +23,9 @@ const { title = "Sankalp's Web Home" } = Astro.props as Props
 				<div class="flex w-full max-w-7xl lg:px-8">
 					<div class="w-full bg-white ring-1 ring-zinc-100 dark:bg-zinc-900 dark:ring-zinc-300/20">
 						<div class="relative flex w-full flex-col">
+							<Nav />
 							<slot />
+							<Footer />
 						</div>
 					</div>
 				</div>
