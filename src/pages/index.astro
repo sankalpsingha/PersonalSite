@@ -1,15 +1,26 @@
 ---
+import MainLayout from '../layouts/MainLayout.astro'
+import Nav from '../components/Nav'
+import AboutMe from '../components/AboutMe.astro'
+import Footer from '../components/Footer'
+import Newsletter from '../components/Newsletter'
+import Container from '../layouts/Container.astro'
+import ImagesBanner from '../components/ImagesBanner.astro'
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body class="flex h-screen justify-center items-center bg-slate-50">
-		<h1 class="text-6xl uppercase bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500">Coming soon</h1>
-	</body>
-</html>
+<MainLayout>
+	<Container>
+		<Nav client:load />
+		<AboutMe />
+	</Container>
+	<ImagesBanner />
+
+	<div class="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
+		<div class="flex flex-col gap-16">
+			<!-- <Article article={article} /> -->
+		</div>
+	</div>
+
+	<Container />
+	<Footer />
+</MainLayout>
